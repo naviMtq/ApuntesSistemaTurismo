@@ -1,0 +1,75 @@
+PASOS
+-------------------------------------------------
+1_configurar la BD en: 
+	.env
+*************************************************
+2_crear el modelo + controlador
+	php artisan make:model Category --all
+ 
+3_crear archivo request
+	php artisan make:request Category\StoreRequest
+	php artisan make:request Category\UpdateRequest
+-------------------------------------------------
+4_modificar migration
+	database>migrations>category_table.php
+
+5_modificar model
+	app>Category.php
+
+6_modificar controller
+	 Http>Controllers>CategoryController.php
+
+7_modificar archivos request
+	Http>Request>StoreRequest y UpdateRequest
+
+8_hacer la migracion
+	php artisan migrate
+------------------------------------
+Posible error al realizar la migracion
+Solucion: https://es.stackoverflow.com/questions/159624/error-sqlstate42000
+
+
+provider
+name
+email
+ruc_number
+address
+phone
+
+purchase
+provider_id
+provider_id
+purchase_date
+tax
+total
+status
+picture
+
+Sale
+client_id
+user_id
+sale_date
+tax
+total
+status
+
+SaleDetail
+sale_id
+product_id
+quantity
+price
+discount
+
+php artisan make:model Sale --all
+php artisan make:request Sale\StoreRequest
+php artisan make:request Sale\UpdateRequest
+
+php artisan make:model SaleDetail --all
+
+https://themewagon.com/themes/dashmin-responsive-free-bootstrap-5-html5-admin-dashboard-template/
+
+
+
+
+
+
